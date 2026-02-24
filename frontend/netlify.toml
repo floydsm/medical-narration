@@ -1,5 +1,5 @@
 [build]
-  publish = "frontend"  # only if publish is frontend; otherwise publish="."
+  publish = "."  # only if publish is frontend; otherwise publish="."
 
 [[redirects]]
   from = "/api/*"
