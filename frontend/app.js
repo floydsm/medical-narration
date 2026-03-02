@@ -1,5 +1,10 @@
-// LOCAL:
-let API_BASE = "http://localhost:8787";
+// API base:
+// - Local dev:  http://localhost:8787
+// - Netlify prod (proxy): ""  (same-origin, uses /api/* redirects)
+const API_BASE =
+  location.hostname === "localhost" || location.hostname === "127.0.0.1"
+    ? "http://localhost:8787"
+    : "";
 
 // DOM
 const filesEl = document.getElementById("files");
