@@ -1,8 +1,9 @@
 [build]
-  publish = "."  # only if publish is frontend; otherwise publish="."
+  publish = "."
 
 [[redirects]]
   from = "/api/*"
   to = "https://medical-narration.onrender.com/api/:splat"
   status = 200
   force = true
+  headers = { Connection = "keep-alive" }
